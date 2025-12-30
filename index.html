@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tampa Endodontics & Periodontics - Expert Root Canal & Gum Disease Treatment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background: #0a4d68;
+            color: #fff;
+            padding: 12px 0;
+        }
+
+        .header-top-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .header-top-left, .header-top-right {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .header-top a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .header-top a:hover {
+            color: #88c8d0;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #0a4d68;
+        }
+
+        .logo span {
+            color: #088395;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #088395;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #088395;
+        }
+
+        .nav-cta {
+            background: #088395;
+            color: #fff !important;
+            padding: 12px 28px;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: #0a4d68;
+            transform: translateY(-2px);
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: #0a4d68;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 110px;
+            background: linear-gradient(135deg, rgba(10, 77, 104, 0.9), rgba(8, 131, 149, 0.85)), 
+                        url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 120px 20px;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 52px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .hero-text h1 span {
+            color: #88c8d0;
+        }
+
+        .hero-text p {
+            font-size: 19px;
+            margin-bottom: 35px;
+            line-height: 1.8;
+            color: #e8f4f5;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #05BFDB;
+            color: #fff;
+            padding: 16px 38px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #088395;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(5, 191, 219, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            padding: 16px 38px;
+            border: 2px solid #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: #fff;
+            color: #0a4d68;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-card {
+            background: #fff;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .hero-card h3 {
+            color: #0a4d68;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .hero-features {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #333;
+        }
+
+        .hero-feature-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #05BFDB, #088395);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        /* Welcome Section */
+        .welcome {
+            padding: 100px 20px;
+            background: #fff;
+        }
+
+        .welcome-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .welcome-image {
+            position: relative;
+        }
+
+        .welcome-img-main {
+            width: 100%;
+            height: 450px;
+            background: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .welcome-img-secondary {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            bottom: -30px;
+            left: -30px;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .welcome-badge {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: #05BFDB;
+            color: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(5, 191, 219, 0.3);
+        }
+
+        .welcome-badge-number {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .welcome-badge-text {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .welcome-text h2 {
+            font-size: 42px;
+            color: #0a4d68;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .welcome-text h2 span {
+            color: #088395;
+        }
+
+        .welcome-text p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .welcome-list {
+            margin: 30px 0;
+            display: grid;
+            gap: 15px;
+        }
+
+        .welcome-list-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #333;
+        }
+
+        .welcome-list-item::before {
+            content: '✓';
+            width: 30px;
+            height: 30px;
+            background: #05BFDB;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 20px;
+            background: #f8fbfc;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-subtitle {
+            color: #05BFDB;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 42px;
+            color: #0a4d68;
+            font-weight: 700;
+        }
+
+        .section-title span {
+            color: #088395;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(8, 131, 149, 0.15);
+            border-color: #05BFDB;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .service-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 77, 104, 0.8), rgba(8, 131, 149, 0.8));
+        }
+
+        .service-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            transition: all 0.3s;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .service-card:hover .service-icon {
+            transform: translate(-50%, -50%) rotateY(360deg);
+            background: #05BFDB;
+        }
+
+        .service-content {
+            padding: 30px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            color: #0a4d68;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 100px 20px;
+            background: #fff;
+        }
+
+        .gallery-grid {
+            max-width: 1200px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 280px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 77, 104, 0.7), rgba(8, 131, 149, 0.7));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Why Choose Section */
+        .why-choose {
+            padding: 100px 20px;
+            background: #0a4d68;
+            color: #fff;
+        }
+
+        .why-choose .section-subtitle {
+            color: #88c8d0;
+        }
+
+        .why-choose .section-title {
+            color: #fff;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 35px;
+        }
+
+        .feature-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 35px 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .feature-box:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #05BFDB;
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .feature-box h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #88c8d0;
+        }
+
+        .feature-box p {
+            color: #e8f4f5;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #f8fbfc, #e8f4f5);
+        }
+
+        .testimonials .section-title {
+            color: #0a4d68;
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 35px;
+            border-radius: 15px;
+            position: relative;
+            border-left: 4px solid #05BFDB;
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: 0 10px 30px rgba(8, 131, 149, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .testimonial-quote {
+            font-size: 50px;
+            color: #05BFDB;
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-text {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .testimonial-info h4 {
+            color: #0a4d68;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .testimonial-stars {
+            color: #ffc107;
+            font-size: 14px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, rgba(10, 77, 104, 0.95), rgba(8, 131, 149, 0.9)),
+                        url('https://images.unsplash.com/photo-1629909615184-74f495363b67?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h2 {
+            font-size: 42px;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .contact-info h2 span {
+            color: #88c8d0;
+        }
+
+        .contact-info > p {
+            color: #e8f4f5;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .info-boxes {
+            display: grid;
+            gap: 20px;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .info-box:hover {
+            box-shadow: 0 8px 25px rgba(5, 191, 219, 0.2);
+            transform: translateX(5px);
+        }
+
+        .info-icon {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #05BFDB, #088395);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .info-text h4 {
+            color: #0a4d68;
+            font-size: 16px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .info-text p {
+            color: #666;
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .contact-form-container {
+            background: #fff;
+            padding: 45px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .contact-form-container h3 {
+            color: #0a4d68;
+            font-size: 28px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #0a4d68;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #05BFDB;
+            box-shadow: 0 0 0 3px rgba(5, 191, 219, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #05BFDB, #088395);
+            color: #fff;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(5, 191, 219, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #0a4d68;
+            color: #fff;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: #88c8d0;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .footer-section p {
+            color: #e8f4f5;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul li a {
+            color: #e8f4f5;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .footer-section ul li a:hover {
+            color: #05BFDB;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background: #05BFDB;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #88c8d0;
+        }
+
+        .footer-bottom a {
+            color: #88c8d0;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: #05BFDB;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .header-top-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-content,
+            .welcome-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .welcome-text h2,
+            .contact-info h2,
+            .section-title {
+                font-size: 32px;
+            }
+
+            .hero {
+                margin-top: 140px;
+                padding: 60px 20px;
+            }
+
+            .services,
+            .why-choose,
+            .testimonials,
+            .contact,
+            .welcome,
+            .gallery {
+                padding: 60px 20px;
+            }
+
+            .welcome-img-secondary {
+                display: none;
+            }
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #05BFDB, #088395);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(5, 191, 219, 0.3);
+            z-index: 999;
+        }
+
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="header-top-left">
+                    <span>📍 Tampa, Florida</span>
+                    <span>📞 (813) 555-0100</span>
+                </div>
+                <div class="header-top-right">
+                    <a href="#contact">Request Appointment</a>
+                    <a href="#">Patient Portal</a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="logo">Tampa <span>Endo Perio</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Book Now</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Expert <span>Endodontic</span> & <span>Periodontal</span> Care</h1>
+                <p>Specializing in advanced root canal therapy, gum disease treatment, and dental implants. Experience pain-free treatment with cutting-edge technology and compassionate care.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Schedule Consultation</a>
+                    <a href="#services" class="btn-secondary">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-card">
+                    <h3>Why Choose Us?</h3>
+                    <div class="hero-features">
+                        <div class="hero-feature">
+                            <div class="hero-feature-icon">🎓</div>
+                            <div>
+                                <strong>Board Certified Specialists</strong>
+                                <p style="margin: 0; font-size: 13px; color: #666;">Highly trained endodontists</p>
+                            </div>
+                        </div>
+                        <div class="hero-feature">
+                            <div class="hero-feature-icon">🔬</div>
+                            <div>
+                                <strong>Advanced Technology</strong>
+                                <p style="margin: 0; font-size: 13px; color: #666;">Microscopes & 3D imaging</p>
+                            </div>
+                        </div>
+                        <div class="hero-feature">
+                            <div class="hero-feature-icon">💚</div>
+                            <div>
+                                <strong>Gentle, Pain-Free Care</strong>
+                                <p style="margin: 0; font-size: 13px; color: #666;">Sedation options available</p>
+                            </div>
+                        </div>
+                        <div class="hero-feature">
+                            <div class="hero-feature-icon">⭐</div>
+                            <div>
+                                <strong>98% Success Rate</strong>
+                                <p style="margin: 0; font-size: 13px; color: #666;">Proven track record</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome" id="about">
+        <div class="welcome-content">
+            <div class="welcome-image">
+                <div class="welcome-img-main"></div>
+                <div class="welcome-img-secondary"></div>
+                <div class="welcome-badge">
+                    <div class="welcome-badge-number">15+</div>
+                    <div class="welcome-badge-text">Years Experience</div>
+                </div>
+            </div>
+            <div class="welcome-text">
+                <h2>Welcome to <span>Tampa Endodontics & Periodontics</span></h2>
+                <p>We are a specialty dental practice dedicated to providing exceptional endodontic and periodontal care to patients throughout the Tampa Bay area. Our team of board-certified specialists combines years of advanced training with state-of-the-art technology to deliver the highest quality treatment.</p>
+                <p>At Tampa Endo/Perio, we understand that visiting a specialist can be stressful. That's why we've created a warm, welcoming environment where your comfort and care are our top priorities.</p>
+                <div class="welcome-list">
+                    <div class="welcome-list-item">Board-certified endodontists and periodontists</div>
+                    <div class="welcome-list-item">Surgical microscopes for precision treatment</div>
+                    <div class="welcome-list-item">3D cone beam imaging technology</div>
+                    <div class="welcome-list-item">Sedation dentistry options available</div>
+                    <div class="welcome-list-item">Same-day emergency appointments</div>
+                    <div class="welcome-list-item">Comprehensive patient education</div>
+                </div>
+                <a href="#contact" class="btn-primary" style="margin-top: 20px;">Schedule Your Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <div class="section-subtitle">Our Specialties</div>
+            <h2 class="section-title">Comprehensive <span>Specialty Care</span></h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80');">
+                    <div class="service-icon">🦷</div>
+                </div>
+                <div class="service-content">
+                    <h3>Root Canal Therapy</h3>
+                    <p>Advanced endodontic treatment using microscopic technology for precise, comfortable root canal procedures with excellent success rates.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1609840113972-f8fc2c68f09f?w=600&q=80');">
+                    <div class="service-icon">💎</div>
+                </div>
+                <div class="service-content">
+                    <h3>Periodontal Treatment</h3>
+                    <p>Comprehensive gum disease therapy including scaling, root planing, and regenerative procedures to restore your oral health.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=600&q=80');">
+                    <div class="service-icon">🔧</div>
+                </div>
+                <div class="service-content">
+                    <h3>Dental Implants</h3>
+                    <p>Expert implant placement and restoration for permanent tooth replacement with natural-looking, long-lasting results.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=600&q=80');">
+                    <div class="service-icon">⚕️</div>
+                </div>
+                <div class="service-content">
+                    <h3>Endodontic Surgery</h3>
+                    <p>Apicoectomy and other microsurgical procedures when conventional root canal treatment is not sufficient.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80');">
+                    <div class="service-icon">✨</div>
+                </div>
+                <div class="service-content">
+                    <h3>Laser Gum Therapy</h3>
+                    <p>Minimally invasive laser treatment for gum disease with reduced discomfort and faster healing times.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80');">
+                    <div class="service-icon">🦴</div>
+                </div>
+                <div class="service-content">
+                    <h3>Bone Grafting</h3>
+                    <p>Advanced bone regeneration procedures to support dental implants and restore proper jaw structure.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1629909615184-74f495363b67?w=600&q=80');">
+                    <div class="service-icon">🚨</div>
+                </div>
+                <div class="service-content">
+                    <h3>Emergency Care</h3>
+                    <p>Same-day appointments available for dental emergencies, severe tooth pain, and traumatic injuries.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=80');">
+                    <div class="service-icon">🔬</div>
+                </div>
+                <div class="service-content">
+                    <h3>Retreatment</h3>
+                    <p>Expert root canal retreatment when previous endodontic therapy needs to be revised or enhanced.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="section-header">
+            <div class="section-subtitle">Our Practice</div>
+            <h2 class="section-title">State-of-the-Art <span>Facility</span></h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&q=80');">
+                <div class="gallery-overlay">Modern Treatment Rooms</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1598531228433-d9f0bdc5ce13?w=800&q=80');">
+                <div class="gallery-overlay">Advanced Technology</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80');">
+                <div class="gallery-overlay">Comfortable Waiting Area</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80');">
+                <div class="gallery-overlay">Sterilization Center</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&q=80');">
+                <div class="gallery-overlay">Digital Imaging</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80');">
+                <div class="gallery-overlay">Patient Care</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="section-header">
+            <div class="section-subtitle">The Tampa Endo/Perio Difference</div>
+            <h2 class="section-title">Why Patients Choose Us</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">👨‍⚕️</div>
+                <h3>Expert Specialists</h3>
+                <p>Our doctors have completed 2-3 years of additional specialized training beyond dental school</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🔬</div>
+                <h3>Advanced Technology</h3>
+                <p>State-of-the-art surgical microscopes, 3D imaging, and laser technology for superior results</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">💙</div>
+                <h3>Comfort Focused</h3>
+                <p>Sedation dentistry options and gentle techniques to ensure a relaxed, pain-free experience</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">⚡</div>
+                <h3>Efficient Treatment</h3>
+                <p>Most procedures completed in a single visit with minimal disruption to your schedule</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🤝</div>
+                <h3>Collaborative Care</h3>
+                <p>We work closely with your general dentist to provide coordinated, comprehensive treatment</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🏆</div>
+                <h3>Proven Results</h3>
+                <p>98% success rate with thousands of satisfied patients throughout the Tampa Bay area</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <div class="section-subtitle">Patient Reviews</div>
+            <h2 class="section-title">What Our Patients Say</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-quote">"</div>
+                <p class="testimonial-text">I was terrified of getting a root canal, but Dr. Smith and the team made it completely painless. The office is modern and clean, and everyone was so caring. Highly recommend!</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background-image: url('https://randomuser.me/api/portraits/women/44.jpg');"></div>
+                    <div class="testimonial-info">
+                        <h4>Jennifer Davis</h4>
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">"</div>
+                <p class="testimonial-text">Best endodontist in Tampa! I had a complex case that required retreatment, and Dr. Johnson saved my tooth. The technology they use is incredible. Worth every penny!</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg');"></div>
+                    <div class="testimonial-info">
+                        <h4>Michael Rodriguez</h4>
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">"</div>
+                <p class="testimonial-text">I've struggled with gum disease for years. The periodontal treatment I received here completely changed my life. My gums are healthy again and I couldn't be happier!</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background-image: url('https://randomuser.me/api/portraits/women/68.jpg');"></div>
+                    <div class="testimonial-info">
+                        <h4>Sarah Kim</h4>
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Get In <span>Touch</span></h2>
+                <p>Ready to restore your smile? Contact us today to schedule your consultation. We offer flexible appointment times and accept most insurance plans.</p>
+                <div class="info-boxes">
+                    <div class="info-box">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <h4>Visit Us</h4>
+                            <p>123 Medical Plaza Drive<br>Tampa, FL 33602</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            <h4>Call Us</h4>
+                            <p>Phone: (813) 555-0100<br>Fax: (813) 555-0101</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-icon">📧</div>
+                        <div class="info-text">
+                            <h4>Email Us</h4>
+                            <p>info@tampaendoperio.com<br>appointments@tampaendoperio.com</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-icon">🕐</div>
+                        <div class="info-text">
+                            <h4>Office Hours</h4>
+                            <p>Mon-Thu: 8:00 AM - 5:00 PM<br>Fri: 8:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <h3>Request an Appointment</h3>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+                        <select id="service">
+                            <option>Select a service</option>
+                            <option>Root Canal Therapy</option>
+                            <option>Periodontal Treatment</option>
+                            <option>Dental Implants</option>
+                            <option>Emergency Care</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" placeholder="Tell us about your dental concerns..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Request Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tampa Endo/Perio</h3>
+                <p>Your trusted specialists for advanced endodontic and periodontal care in the Tampa Bay area.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">in</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">▶</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#">Root Canal Therapy</a></li>
+                    <li><a href="#">Periodontal Treatment</a></li>
+                    <li><a href="#">Dental Implants</a></li>
+                    <li><a href="#">Endodontic Surgery</a></li>
+                    <li><a href="#">Emergency Care</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Patient Resources</h3>
+                <ul>
+                    <li><a href="#">Patient Portal</a></li>
+                    <li><a href="#">New Patient Forms</a></li>
+                    <li><a href="#">Insurance Information</a></li>
+                    <li><a href="#">Financial Options</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tampa Endodontics & Periodontics. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+
+    <script>
+        // Scroll to top button functionality
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('active');
+            } else {
+                scrollTop.classList.remove('active');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your appointment request! We will contact you shortly to confirm your appointment.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
